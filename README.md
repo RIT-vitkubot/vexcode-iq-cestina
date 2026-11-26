@@ -14,6 +14,7 @@ Je určené hlavně pro **děti (cca 8–12 let)**, které programují roboty VE
 | Levá pasáž / Pohon tanku | **levé arkádové řízení / tankové řízení** |
 | OTEVŘENO / blízko | **otevři / zavři** |
 | Utěšit | **Konzole** |
+| nápověda k blokům jen anglicky | **česká nápověda (207 stránek)** |
 
 ## Instalace
 
@@ -28,6 +29,8 @@ Aktualizace: stáhni novější zip, ve `chrome://extensions` starou verzi odebe
 
 - bloky a rozbalovací volby (všechny platformy VEXcode),
 - menu, dialogy, nastavení zařízení (robot-config), příklady a návody,
+- nápověda k blokům (VEXcode pro češtinu žádnou nemá),
+- texty natvrdo zapsané v kódu (pojistka přes DOM).
 
 Textový režim (Python/C++) se nepřekládá.
 
@@ -36,6 +39,8 @@ Textový režim (Python/C++) se nepřekládá.
 Rozšíření běží v kontextu stránky (`world: MAIN`, `document_start`), ještě před aplikací:
 
 1. obalí `JSON.parse`, kterým VEXcode načítá tabulky překladů, a přepíše v nich sekci `cs` – bloky se tak rovnou vykreslí s českým textem a správnou šířkou;
+2. nápovědě k blokům (objekt bez češtiny) podstrčí českou verzi přes getter `cs`;
+3. zbylé anglické texty na stránce přepíše podle slovníku (jen v češtině, nesahá do bloků ani do editoru kódu).
 
 ## Úpravy překladu
 

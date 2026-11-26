@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "VEXcode IQ – lepší čeština",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Nahradí strojový český překlad VEXcode IQ (codeiq.vex.com) srozumitelnou češtinou pro děti.",
   "content_scripts": [
     {
