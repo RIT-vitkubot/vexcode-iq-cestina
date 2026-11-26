@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "VEXcode IQ – lepší čeština",
+  "version": "1.0.0",
+  "description": "Nahradí strojový český překlad VEXcode IQ (codeiq.vex.com) srozumitelnou češtinou pro děti.",
+  "content_scripts": [
+    {
+      "matches": ["https://codeiq.vex.com/*"],
+      "js": ["preklad.js", "inject.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    }
+  ],
+  "icons": {"128": "icon128.png"}
+}
